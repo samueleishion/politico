@@ -133,12 +133,6 @@ def process_speech(author_first,author_last,title,datetime,filename,stopwords):
 		speech.add_text(t,arr)
 
 	return speech
-	# arr = [] 
-	
-	# speech.add_text("transcript",arr)
-
-	# arr = []
-	# for paragraph in text["paragraphs"]
 
 def main():
 
@@ -146,17 +140,16 @@ def main():
 		"data": []
 	}
 
-
-	stopwords = load("english.stop.json")["stopwords"]
+	stopwords = load("data/english.stop.json")["stopwords"]
 
 	# trump 
 	# https://www.nytimes.com/interactive/2017/01/20/us/politics/donald-trump-inauguration-speech-transcript.html
-	speech = process_speech("Donald","Trump","Inauguration Speech",1484910000,"text/trump.speech.json",stopwords)
+	speech = process_speech("Donald","Trump","Inauguration Speech",1484910000,"data/trump.speech.json",stopwords)
 	obj["data"].append(speech.JSON())  
 
 	# obama 
 	# https://obamawhitehouse.archives.gov/blog/2009/01/21/president-barack-obamas-inaugural-address
-	speech = process_speech("Barack","Obama","Inauguration Speech",1232535600,"text/obama.speech.json",stopwords)
+	speech = process_speech("Barack","Obama","Inauguration Speech",1232535600,"data/obama.speech.json",stopwords)
 	obj["data"].append(speech.JSON()) 
 
 	print obj 
