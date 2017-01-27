@@ -41,6 +41,50 @@ $color-gray-700:	#616161;
 $color-gray-800:	#424242;
 $color-gray-900:	#212121;
 
+$color-green-50:	#F1F8E9; 
+$color-green-100:	#DCEDC8; 
+$color-green-200:	#C5E1A5; 
+$color-green-300:	#AED581; 
+$color-green-400:	#9CCC65; 
+$color-green-500:	#8BC34A; 
+$color-green-600:	#7CB342; 
+$color-green-700:	#689F38; 
+$color-green-800:	#558B2F; 
+$color-green-900:	#33691E; 
+
+$color-red-50:		#FFEBEE; 
+$color-red-100:		#FFCDD2; 
+$color-red-200:		#EF9A9A; 
+$color-red-300:		#E57373; 
+$color-red-400:		#EF5350; 
+$color-red-500:		#F44336; 
+$color-red-600:		#E53935; 
+$color-red-700:		#D32F2F; 
+$color-red-800:		#C62828; 
+$color-red-900:		#B71C1C; 
+
+$color-blue-50:		#E3F2FD;
+$color-blue-100:	#BBDEFB;
+$color-blue-200:	#90CAF9;
+$color-blue-300:	#64B5F6;
+$color-blue-400:	#42A5F5;
+$color-blue-500:	#2196F3;
+$color-blue-600:	#1E88E5;
+$color-blue-700:	#1976D2;
+$color-blue-800:	#1565C0;
+$color-blue-900:	#0D47A1;
+
+$color-yellow-50:	#FFF8E1; 
+$color-yellow-100:	#FFECB3; 
+$color-yellow-200:	#FFE082; 
+$color-yellow-300:	#FFD54F; 
+$color-yellow-400:	#FFCA28; 
+$color-yellow-500:	#FFC107; 
+$color-yellow-600:	#FFB300; 
+$color-yellow-700:	#FFA000; 
+$color-yellow-800:	#FF8F00; 
+$color-yellow-900:	#FF6F00; 
+
 body {
 	font-family:HelveticaNeue-Light,Helvetica;
 	font-size:16px; 
@@ -65,8 +109,7 @@ body {
 	height:100%; 
 	background-color:$color-white; 
 	border-right:solid 1px $color-gray-300;
-	padding:20px;
-	padding-top:80px;  
+	padding:80px 20px;
 	overflow-y:auto; 
 	z-index:899; 
 
@@ -86,8 +129,36 @@ body {
 	width:720px; 
 	position:absolute; 
 	top:100px; left:50%; 
-	background-color:$color-white; 
-	box-shadow:0px 0px 4px 1px $color-black_o--2;
-	padding:20px; 
-	margin-left:-350px; 
-	z-index:199; }
+	padding-bottom:80px; 
+	margin-left:-250px; 
+	z-index:199; 
+
+	&_document {
+		background-color:$color-white; 
+		box-shadow:0px 0px 4px 1px $color-black_o--2;
+		line-height:30px; 
+	}
+
+	&_fragment {
+
+		padding:20px; 
+		border-left:10px solid $color-white; 
+		border-bottom:1px solid $color-gray-100;
+
+		&:last-child {
+			margin-bottom:0px!important; 
+		}
+
+		&--pos {
+			border-left-color:$color-green-500;
+		}
+
+		&--neg {
+			border-left-color:$color-red-500;
+		}
+
+		&--neutral {
+			border-left-color:$color-gray-500;
+		}
+	}
+}

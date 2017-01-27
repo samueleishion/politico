@@ -67,7 +67,7 @@ module.exports = React.createClass({
 			<div>
 				<Topbar data={this.state.data} selectSpeech={this.selectSpeech} selectedIndex={this.state.selectedIndex} />
 				<Sidebar data={this.state.data} selected={this.state.selected} selectSpeech={this.selectSpeech} selectedIndex={this.state.selectedIndex} ngramData={this.state.ngramData} sentimentData={this.state.sentimentData} />
-				<Document data={this.state.data} />
+				<Document data={this.state.selected} />
 			</div>
 		); 
 	}
